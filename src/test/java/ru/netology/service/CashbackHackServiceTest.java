@@ -1,7 +1,7 @@
 package ru.netology.service;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.testng.annotations.Test;
+import static org.testng.Assert.*;
 
 public class CashbackHackServiceTest {
 
@@ -11,15 +11,15 @@ public class CashbackHackServiceTest {
         int amount = 900;
         int expected = 100;
         int actual = service.remain(amount);
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
     }
 
     @Test
     public void testRemainWithExactBoundary() {
         CashbackHackService service = new CashbackHackService();
-        int amount = 0;
-        int expected = 1000;
+        int amount = 1000;
+        int expected = 0;
         int actual = service.remain(amount);
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
     }
 }
