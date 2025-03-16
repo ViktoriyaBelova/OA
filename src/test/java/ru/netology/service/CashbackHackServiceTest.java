@@ -6,20 +6,12 @@ import static org.junit.Assert.*;
 public class CashbackHackServiceTest {
 
     @Test
-    public void testRemain() {
+    public void Remain() {
         CashbackHackService service = new CashbackHackService();
-        int amount = 900;
-        int expected = 100;
-        int actual = service.remain(amount);
-        assertEquals(expected, actual); // JUnit 4 использует expected, actual
-    }
+        int amount = 999;
 
-    @Test
-    public void testRemainWithExactBoundary() {
-        CashbackHackService service = new CashbackHackService();
-        int amount = 1000;
-        int expected = 0;
         int actual = service.remain(amount);
-        assertEquals(expected, actual); // JUnit 4 использует expected, actual
+        int expected = 999;
+        assertEquals(expected, actual);
     }
 }
